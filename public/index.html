@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind CSS Starter Kit</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS Starter Kit</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
-    <script src="time.js" defer></script>
-    <script src="date.js" defer></script>
+  <script src="time.js" defer></script>
+  <script src="date.js" defer></script>
 
 </head>
-<body class="h-screen flex items-center justify-center">
+<body>
 
+    <!-- Date -->
+    <time class="date font-mono block mb-4">
+      <data class="dayOfWeek text-9xl">SMTWTFS</data> -
+      <data class="month text-9xl">Month</data>
+      <data class="dayOfMonth text-9xl">00</data>,
+      <data class="year text-9xl">0000</data> 
+    </time>
 
-    <main>
+    <!-- Time -->
+    <time class="container mx-auto block grid lg:grid-cols-12 md:grid-cols-2 font-mono mt-4">
+      <data class="hours text-9xl">HH</data> :
+      <data class="minutes text-9xl">MM</data> :
+      <data class="seconds text-9xl">SS</data>
+      <data class="amOrPM text-9xl">AM/PM</data>
+    </time>
   
-        <!-- Time -->
-         
-        <time class="container mx-auto block grid lg:grid-cols-12 md:grid-cols-2 font-mono">
-                <data class="hours text-9x1">HH</data> :
-                <data class="minutes text-9x1">MM</data> :
-                <data class="seconds text-9x1">SS</data>
-                <data class="amOrPM text-9x1">AM/PM</data>
-            </time>
-      
-          
-        <!-- Date -->
-        <time class="date font-mono">
-          <data class="dayOfWeek text-9x1">SMTWTFS</data> -
-          <data class="month text-9x1">Month</data>
-          <data class="dayOfMonth text-9x1">00</data>,
-          <data class="year text-9x1">0000</data> 
-        </time>
-      
-      </main>
-    
 </body>
 </html>
