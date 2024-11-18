@@ -7,15 +7,22 @@ body {
   height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
+  background-image: url('https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/38634a869b2ab45187e126b684545010.jpg');
+  background-size: cover;
+  background-position: center;
 }
-
 time {
   text-align: center;
+  top: 60px;
 }
 .date, time {
   font-size: 2rem;
-  color: #b7142e;
-  animation: pulse 2s infinite;
+  color: white;
+  animation: pulse 1s infinite;
+  position: absolute;
+}
+.date{
+  top: 20px;
 }
 @keyframes pulse {
   0%, 100% {
