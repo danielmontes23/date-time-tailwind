@@ -17,7 +17,7 @@ time {
 }
 .date, time {
   font-size: 2rem;
-  color: white;
+  color:   #277CE0;
   animation: pulse 1s infinite;
   position: absolute;
 }
