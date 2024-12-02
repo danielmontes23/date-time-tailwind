@@ -40,8 +40,8 @@
 
 
 // Start here ....
-const fetchWeather = async (location, date1, date2, apiKey) => {
-    const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${date1}/${date2}?key=${apiKey}`;
+const fetchWeather = async (lat, lon, apiKey) => {
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
     
     try {
         const response = await fetch(url);
@@ -50,7 +50,16 @@ const fetchWeather = async (location, date1, date2, apiKey) => {
         }
         const weatherData = await response.json();
         console.log(weatherData);
-        // You can use the weather data to update your website's UI here.
+
+        // Get DOM Elements
+        const city = document.querySelector('.city');
+        const temp = document.querySelector('.temp');
+        const icon = document.querySelector('.icon');
+
+        // Set DOM Elements
+        city.textContent = weatherData.name; 
+        temp.textContent = weatherData.main.temp;
+        icon.setAttribute('src', `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`);
     } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
     }
@@ -63,10 +72,7 @@ const getWeatherForCurrentLocation = (apiKey) => {
             (position) => {
                 const lat = position.coords.latitude;
                 const lon = position.coords.longitude;
-                const location = `${lat},${lon}`;
-                const date1 = '2023-01-01'; // Replace with your desired start date
-                const date2 = '2023-01-02'; // Replace with your desired end date
-                fetchWeather(location, date1, date2, apiKey);
+                fetchWeather(lat, lon, apiKey);
             },
             (error) => {
                 console.error('Error getting location:', error);
@@ -78,5 +84,5 @@ const getWeatherForCurrentLocation = (apiKey) => {
 };
 
 // Example usage
-const apiKey = 'IDK'; // Replace with your actual API key
+const apiKey = import.meta.env.PUBLIC_WEATHER_API; // Use the API key from environment variables
 getWeatherForCurrentLocation(apiKey);
