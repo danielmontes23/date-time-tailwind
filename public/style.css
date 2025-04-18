@@ -27,26 +27,3 @@ body {
 }
 
 /* Specific styling for Time */
-.time {
-  margin-top: 10px;
-}
-
-/* Specific styling for Weather (Location and Temperature) */
-.weather {
-  margin-top: 10px;
-}
-
-/* Animation for pulse effect */
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-/* Optional: Add pulse animation to elements if needed */
-.date, .time, .weather {
-  animation: pulse 1s infinite;ation: pulse 1s infinite;
-}
