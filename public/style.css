@@ -5,20 +5,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center content vertically */
+  justify-content: flex-start; /* Align content to the top */
   height: 100vh;
   background: black;
   color: white;
   background-image: url('https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/38634a869b2ab45187e126b684545010.jpg');
   background-size: cover;
   background-position: center;
+  padding-top: 20px; /* Add padding to push content slightly down */
 }
 
 /* Styling for Date, Time, and Weather */
 .date, .time, .weather {
   font-size: 26px; /* Set font size */
   text-align: center; /* Center text */
-  margin: 10px 0; /* Add spacing between elements */
+  margin: 5px 0; /* Reduce spacing between elements */
 }
 
 /* Specific styling for Date */
