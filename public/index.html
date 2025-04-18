@@ -15,11 +15,8 @@
 <body>
 
     <!-- Date -->
-    <time class="font-mono block mb-4"></time>
-      <data class="dayOfWeek text-9xl">SMTWTFS</data> -
-      <data class="month text-9xl">Month</data>
-      <data class="dayOfMonth text-9xl">00</data>,
-      <data class="year text-9xl">0000</data> 
+    <time id="currentDate" class="font-mono block mb-4 text-4xl text-[#277CE0]">
+      <!-- JavaScript will populate this -->
     </time>
 
     <!-- Time -->
@@ -36,26 +33,5 @@
       <div class="temperature text-9xl" id="tempOfCity">Temperature</div>
     </div>
 
-    <!--
-    <section>
-      <input type="text" id="city-input" placeholder="Enter city name" />
-      <button id="search-button" style="margin-top: 10px; border: 0.0625em solid black; border-radius: 0.3125em;">Search</button>
-      <div id="result-container" style="margin-top: 20px;"></div>
-    </section>
-    -->
-
-    <!-- Styling -->
-    <style>
-      section {
-        position: absolute;
-        right: 30%;
-        top: 25%;
-        transform: translate(50%, -50%);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-    </style>
-    
 </body>
 </html>
