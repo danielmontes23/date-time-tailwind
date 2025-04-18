@@ -1,71 +1,52 @@
+/* General styling for body */
 body {
- 
-  background: black;
- 
-  display: flex;
- 
-  flex-direction: column;
- 
-  align-items: center;
- 
-  justify-content: center;
- 
-  height: 100vh;
- 
   margin: 0;
- 
   font-family: Arial, sans-serif;
- 
-  background-image: url('https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/38634a869b2ab45187e126b684545010.jpg');
- 
-  background-size: cover;
- 
-  background-position: center;
- 
-}
- 
-time {
- 
-  text-align: center;
- 
-  top: 60px;
- 
-}
- 
-.date, time {
- 
-  font-size: 2rem;
- 
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  height: 100vh;
+  background: black;
   color: white;
- 
+  background-image: url('https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/38634a869b2ab45187e126b684545010.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
-  color:   #277CE0;
- 
-  animation: pulse 1s infinite;
- 
-  position: absolute;
- 
+/* Styling for Date, Time, and Location */
+.date, .time, .weather {
+  font-size: 26px; /* Set font size */
+  text-align: center; /* Center text */
+  margin: 10px 0; /* Add spacing between elements */
 }
- 
-.date{
- 
-  top: 20px;
- 
+
+/* Specific styling for Date */
+.date {
+  margin-top: 20px; /* Add extra spacing at the top */
 }
- 
+
+/* Specific styling for Time */
+.time {
+  margin-top: 10px;
+}
+
+/* Specific styling for Weather (Location and Temperature) */
+.weather {
+  margin-top: 10px;
+}
+
+/* Animation for pulse effect */
 @keyframes pulse {
- 
   0%, 100% {
- 
     opacity: 1;
- 
   }
- 
   50% {
- 
     opacity: 0.5;
- 
   }
- 
+}
+
+/* Optional: Add pulse animation to elements if needed */
+.date, .time, .weather {
+  animation: pulse 1s infinite;ation: pulse 1s infinite;
 }
