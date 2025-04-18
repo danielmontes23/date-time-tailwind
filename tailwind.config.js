@@ -1,12 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/*.{html,js}"],
+  content: ["./public/*.{html,js}"],
   theme: {
     extend: {},
   },
-  plugins: [],
-  scripts: {
-    "dev": "tailwindcss -i ./src/input.css -o ./src/style.css --watch"
-  }
+  plugins: []
 }
+
+"dev": "tailwindcss -i ./public/input.css -o ./public/style.css --watch"
 
