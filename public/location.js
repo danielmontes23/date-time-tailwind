@@ -33,13 +33,25 @@ const cityInput = document.getElementById("city-input");
 
 const searchCity = async () => {
   const cityName = cityInput?.value.trim();
+  const resultContainer = document.getElementById("result-container"); // Add a container for results
+
   if (cityName) {
     console.log(`Searching for city: ${cityName}`);
     const data = await getLocationData(cityName);
-    // Display the data or handle it as needed
-    console.log("Location Data:", data);
+
+    if (data) {
+      // Display the fetched data in the result container
+      resultContainer.innerHTML = `
+        <h3>City: ${data.city || "Unknown"}</h3>
+        <p>Latitude: ${data.latitude || "N/A"}</p>
+        <p>Longitude: ${data.longitude || "N/A"}</p>
+      `;
+    } else {
+      resultContainer.innerHTML = `<p>Could not fetch data for "${cityName}".</p>`;
+    }
   } else {
     console.error("Please enter a valid city name.");
+    resultContainer.innerHTML = `<p>Please enter a valid city name.</p>`;
   }
 };
 
