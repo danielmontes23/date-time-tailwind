@@ -5,7 +5,12 @@ async function getCurrentLocation() {
         navigator.geolocation.getCurrentPosition(async (position) => {
             const { latitude, longitude } = position.coords;
             const location = await getCityAndState(latitude, longitude);
-            console.log(location);
+
+            if (location) {
+                const { city, state } = location;
+                const locationElement = document.getElementById("nameOfCity");
+                locationElement.textContent = `Location: ${city}, ${state}`;
+            }
         }, (error) => {
             console.error("Error getting location: ", error);
         });
@@ -21,8 +26,13 @@ async function getCityAndState(lat, lon) {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        const { city, state } = data.results[0].components;
-        return { city, state };
+        if (data.results && data.results.length > 0) {
+            const { city, state } = data.results[0].components;
+            return { city, state };
+        } else {
+            console.error("No results found for the given coordinates.");
+            return null;
+        }
     } catch (error) {
         console.error("Error fetching location data: ", error);
         return null;
