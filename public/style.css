@@ -57,18 +57,17 @@ html {
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
 
+/* General styling for body */
 body {
   margin: 0;
-  /* 1 */
-  line-height: inherit;
-  /* 2 */
-  background: black;
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100vh;
-  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
   background-image: url('https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/38634a869b2ab45187e126b684545010.jpg');
   background-size: cover;
   background-position: center;
@@ -673,4 +672,24 @@ time {
   font-size: 2rem;
   color: #277CE0;
   animation: pulse 1s infinite;
+}
+
+/* Styling for Date, Time, and Location */
+.date, .time, .weather {
+  font-size: 26px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Specific positioning for Date, Time, and Location */
+.date {
+  margin-top: 20px; /* Push Date to the top */
+}
+
+.time {
+  margin-top: 10px;
+}
+
+.weather {
+  margin-top: 10px;
 }
