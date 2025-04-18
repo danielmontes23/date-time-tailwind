@@ -27,3 +27,27 @@ async function getLocationData(city) {
   }
 }
 
+// Handle city search
+const searchButton = document.getElementById("search-button");
+const cityInput = document.getElementById("city-input");
+
+const searchCity = async () => {
+  const cityName = cityInput?.value.trim();
+  if (cityName) {
+    console.log(`Searching for city: ${cityName}`);
+    const data = await getLocationData(cityName);
+    // Display the data or handle it as needed
+    console.log("Location Data:", data);
+  } else {
+    console.error("Please enter a valid city name.");
+  }
+};
+
+searchButton?.addEventListener("click", searchCity);
+
+cityInput?.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    searchCity();
+  }
+});
+
