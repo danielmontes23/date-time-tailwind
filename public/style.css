@@ -14,20 +14,26 @@ body {
   background-position: center;
 }
 
-/* Styling for Date, Time, and Location */
+/* Styling for Date, Time, and Weather */
 .date, .time, .weather {
   font-size: 26px; /* Set font size */
   text-align: center; /* Center text */
   margin: 10px 0; /* Add spacing between elements */
-  position: absolute; /* Position elements absolutely */
-  top: 10px; /* Move to the top of the page */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust for centering */
 }
 
 /* Specific styling for Date */
 .date {
-  margin-top: 0; /* Remove extra spacing at the top */
+  margin-top: 20px; /* Add extra spacing at the top */
 }
 
 /* Specific styling for Time */
+.time {
+  margin-top: 10px;
+}
+
+/* Specific styling for Weather */
+.weather {
+  margin-top: 10px;
+  font-size: 26px; /* Ensure consistent font size */
+  text-align: center; /* Center the text */
+}
