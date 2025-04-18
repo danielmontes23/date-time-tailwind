@@ -2,5 +2,4 @@
 
 Get the current date and time in your HTML styled with Tailwind CSS.
 
-##Sources
-* [Source](URL)
+Still needs more work to get the weather and location to full function.
