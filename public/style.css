@@ -610,7 +610,7 @@ video {
 /* Your Awesome Styles */
 
 * {
-  outline: 1px dotted gray;
+  outline: none; /* Changed from '1px dotted gray' to 'none' */
 }
 
 body{
