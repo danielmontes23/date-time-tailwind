@@ -5,5 +5,8 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  scripts: {
+    "dev": "tailwindcss -i ./src/input.css -o ./src/style.css --watch"
+  }
 }
 
